@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandy</title>
+    <link rel="stylesheet" href="Sandy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <section class="bg">
+        <header class="header">
+            <h1>🙏🙏  Welcome  🙏🙏</h1>
+        </header>
+        <banner class="banner">
+            <div class="banner-child-1">
+                <img class="img" src="Sandy-pic.jpg">
+            </div>
+            <div class="banner-child-2">
+                <p class="name">Sandeep Chowdary</p>
+                <p>Techie | Ambivert | Gaming</p>
+            </div>
+        </banner>
+        <section class="follows">
+            <div class="link">
+                <a href="https://instagram.com/i_a_m_sandeep?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i class="fa-brands fa-instagram symbol-1"></i></a>
+            </div>
+            <div class="link">
+                <a href="https://wa.me/9493867235" target="_blank"><i class="fa-brands fa-whatsapp symbol-2"></i></a>
+            </div>
+            <div class="link">
+                <a href="https://www.linkedin.com/in/sandeep-kamma-05b90718b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin-in symbol-3"></i></a>
+            </div>
+            <div class="link">
+                <a href="https://x.com/sandeep08052001?t=DWuPoroES1dbFj7OEm_8Sw&s=09" target="_blank"><i class="fa-brands fa-x-twitter symbol-4"></i></a>
+            </div>
+        </section>
+    </section>
+        <footer class="footer">
+            <div class="footer-child">
+                <form class="form" onsubmit="sendEmail(); reset(); return false;">
+                    <h1 class="heading">For Queries</h1>
+                    <input id="name" type="text" placeholder="Name*" required maxlength="25" minlength="3" class="ip" oninvalid="this.setCustomValidity('Enter Name Here')" oninput="this.setCustomValidity('')"><br>
+                    <input id="email" type="email" placeholder="E-mail" required class="ip" oninvalid="this.setCustomValidity('Enter Valid Gmail ID')" oninput="this.setCustomValidity('')"><br>
+                    <textarea id="message" class="txt" placeholder="Write to me" maxlength="450"></textarea><br>
+                    <button type="submit" class="send-button">send</button>
+                </form>
+            </div>
+            <div class="footer-child-2">
+                <a class="footer-links" href="tel: 9493867235"><p><i class="fa-solid fa-phone footer-links"></i> +91 9493867235</p></a>
+                <a class="footer-links" href = "mailto: sandeepkamma99@gmail.com"><p><i class="fa-regular fa-envelope footer-links"></i> sandeepkamma99@gmail.com</p></a>
+                <p class="footer-links"><i class="fa-solid fa-gamepad"></i> BGMI id : GSR×OpTiMuS</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3528.60992803769!2d81.15606305090093!3d16.823486025017928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a366a1d66acd667%3A0x8e7447d5e2e9e582!2sMunduru%2C%20Andhra%20Pradesh%20534475!5e0!3m2!1sen!2sin!4v1699970495982!5m2!1sen!2sin" width="70%" height="40%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "sandeepkamma99@gmail.com",
+                Password : "EF0A05B5CA35485AEC0E06648C4885B568B5",
+                To : 'sandeepkamma99@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "Name: " + document.getElementById("name").value
+                + "<br> email: " + document.getElementById("email").value
+                + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message Sent Succesfully")
+            );
+        }
+    </script>
+
+</body>
+</html>
